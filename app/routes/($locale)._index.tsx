@@ -9,6 +9,7 @@ import {PAGE_QUERY} from '~/data/graphql/pack/page';
 import {routeHeaders} from '~/data/cache';
 
 import type {Route} from './+types/($locale)._index';
+import { WestSideRichText } from '~/sections/Westside';
 
 export const headers = routeHeaders;
 
@@ -62,5 +63,10 @@ export const meta: Route.MetaFunction = ({matches}) => {
 export default function Index() {
   const {page} = useLoaderData<typeof loader>();
 
-  return <RenderSections content={page} />;
+  return (
+    <>
+    <RenderSections content={page} />
+    <WestSideRichText cms={{content: page?.content || ''}} />
+    </>
+  );
 }

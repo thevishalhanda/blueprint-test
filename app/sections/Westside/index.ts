@@ -1,0 +1,1 @@
+export {WestSideRichText} from './Westside';

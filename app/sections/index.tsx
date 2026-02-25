@@ -39,11 +39,13 @@ import {Video} from './Video';
 import {VideoEmbed} from './VideoEmbed';
 import {MetaobjectTextBlock} from './MetaobjectTextBlock/MetaobjectTextBlock';
 import {MetaobjectImage} from './MetaobjectImage';
+import {WestSideRichText} from './Westside/Westside';
 
 export function registerSections() {
   /* Text ---------- */
   registerSection(RichText as Section, {name: 'rich-text'});
   registerSection(TextBlock as Section, {name: 'text-block'});
+  registerSection(WestSideRichText as Section, {name: 'westside-rich-text'});
   registerSection(Markdown as Section, {name: 'markdown'});
   registerSection(Accordions as Section, {name: 'accordions'});
   registerSection(IconRow as Section, {name: 'icon-row'});
